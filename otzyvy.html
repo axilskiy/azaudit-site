@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
@@ -29,7 +29,15 @@
         <div class="burger"><span></span><span></span><span></span></div>
         <ul class="menu">
           <li><a href="index.html">Главная</a></li>
-          <li><a href="about.html">О компании</a></li>
+          <li class="has-dropdown">
+            <a href="about.html">О компании <span class="dropdown-arrow">▾</span></a>
+            <ul class="dropdown">
+              <li><a href="about.html">О компании</a></li>
+              <li><a href="team.html">Команда</a></li>
+              <li><a href="licenzii.html">Лицензии</a></li>
+              <li><a href="otzyvy.html">Отзывы</a></li>
+            </ul>
+          </li>
           <li class="has-dropdown">
             <a href="#">Услуги <span class="dropdown-arrow">▾</span></a>
             <ul class="dropdown">
@@ -41,7 +49,6 @@
               <li><a href="business-plans.html">Бизнес-планы</a></li>
             </ul>
           </li>
-          <li><a href="team.html">Команда</a></li>
           <li><a href="cases.html">Кейсы</a></li>
           <li><a href="blog.html">Блог</a></li>
           <li><a href="contact.html">Контакты</a></li>
@@ -65,13 +72,13 @@
     </div>
   </section>
 
-  <section class="fade-in" style="padding:48px 0">
+  <section class="fade-in" style="padding:48px 0; background:var(--navy)">
     <div class="container">
       <div class="stats-bar-grid">
-        <div class="stat-item"><span class="stat-num">15+</span><span class="stat-label">лет работы</span></div>
-        <div class="stat-item"><span class="stat-num">200+</span><span class="stat-label">клиентов за всё время</span></div>
-        <div class="stat-item"><span class="stat-num">0</span><span class="stat-label">отозванных заключений</span></div>
-        <div class="stat-item"><span class="stat-num">50+</span><span class="stat-label">благодарственных писем</span></div>
+        <div class="stat-item"><div class="stat-number">15+</div><div class="stat-label">лет работы</div></div>
+        <div class="stat-item"><div class="stat-number">200+</div><div class="stat-label">клиентов за всё время</div></div>
+        <div class="stat-item"><div class="stat-number">0</div><div class="stat-label">отозванных заключений</div></div>
+        <div class="stat-item"><div class="stat-number">50+</div><div class="stat-label">благодарственных писем</div></div>
       </div>
     </div>
   </section>
@@ -84,45 +91,65 @@
       <div class="about-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
 
         <div class="about-card fade-in-left">
-          <div style="font-size:2rem;margin-bottom:12px">🏥</div>
+          <a href="docs/Корал мед.pdf" target="_blank" rel="noopener" class="review-doc-prev">
+            <span class="doc-icon">📄</span>
+            <span class="doc-type">PDF</span>
+          </a>
           <h3>Медицинский центр «Коралл Мед»</h3>
           <p>Благодарственное письмо за качественное проведение аудиторской проверки и профессиональный подход команды.</p>
           <a href="docs/Корал мед.pdf" target="_blank" rel="noopener" class="btn-outline" style="margin-top:16px;display:inline-block">Открыть письмо (PDF)</a>
         </div>
 
         <div class="about-card fade-in-right">
-          <div style="font-size:2rem;margin-bottom:12px">🏥</div>
+          <a href="docs/Инф больница.PDF" target="_blank" rel="noopener" class="review-doc-prev">
+            <span class="doc-icon">📄</span>
+            <span class="doc-type">PDF</span>
+          </a>
           <h3>Медицинский центр «Инф больница»</h3>
           <p>Письмо подтверждает многолетнее сотрудничество в области бухгалтерского сопровождения и аудита.</p>
           <a href="docs/Инф больница.PDF" target="_blank" rel="noopener" class="btn-outline" style="margin-top:16px;display:inline-block">Открыть письмо (PDF)</a>
         </div>
 
         <div class="about-card fade-in-left">
-          <div style="font-size:2rem;margin-bottom:12px">⚓</div>
+          <a href="docs/Алые паруса.docx" target="_blank" rel="noopener" class="review-doc-prev">
+            <span class="doc-icon">📝</span>
+            <span class="doc-type">Word</span>
+          </a>
           <h3>Компания «Алые паруса»</h3>
           <p>Благодарность за оперативное восстановление бухгалтерского учёта и грамотное налоговое сопровождение.</p>
           <a href="docs/Алые паруса.docx" target="_blank" rel="noopener" class="btn-outline" style="margin-top:16px;display:inline-block">Открыть письмо (Word)</a>
         </div>
 
         <div class="about-card fade-in-right">
-          <div style="font-size:2rem;margin-bottom:12px">📋</div>
+          <a href="docs/рек. письмо 3.docx" target="_blank" rel="noopener" class="review-doc-prev">
+            <span class="doc-icon">📝</span>
+            <span class="doc-type">Word</span>
+          </a>
           <h3>Рекомендательное письмо</h3>
           <p>Рекомендательное письмо от клиента, характеризующее профессионализм и надёжность нашей команды.</p>
           <a href="docs/рек. письмо 3.docx" target="_blank" rel="noopener" class="btn-outline" style="margin-top:16px;display:inline-block">Открыть письмо (Word)</a>
         </div>
 
         <div class="about-card fade-in-left">
-          <div style="font-size:2rem;margin-bottom:12px">✉️</div>
+          <a href="docs/Благодар.docx" target="_blank" rel="noopener" class="review-doc-prev">
+            <span class="doc-icon">📝</span>
+            <span class="doc-type">Word</span>
+          </a>
           <h3>Благодарственное письмо</h3>
           <p>Письмо от клиента по итогам аудита финансовой отчётности за 2023–2024 годы.</p>
           <a href="docs/Благодар.docx" target="_blank" rel="noopener" class="btn-outline" style="margin-top:16px;display:inline-block">Открыть письмо (Word)</a>
         </div>
 
         <div class="about-card fade-in-right">
-          <div style="font-size:2rem;margin-bottom:12px">🖼️</div>
+          <div class="review-thumb"
+               data-lightbox="docs/Благ письмо.jpg.jpeg"
+               data-lightbox-alt="Благодарственное письмо"
+               tabindex="0" role="button" aria-label="Открыть скриншот письма">
+            <img src="docs/Благ письмо.jpg.jpeg" alt="Благодарственное письмо — превью" loading="lazy" />
+            <div class="review-thumb-zoom">⊕</div>
+          </div>
           <h3>Благодарственное письмо</h3>
           <p>Официальное благодарственное письмо с печатью организации за качество оказанных аудиторских услуг.</p>
-          <a href="docs/Благ письмо.jpg.jpeg" target="_blank" rel="noopener" class="btn-outline" style="margin-top:16px;display:inline-block">Открыть (изображение)</a>
         </div>
 
       </div>
@@ -182,8 +209,7 @@
           <h4>Компания</h4>
           <ul>
             <li><a href="about.html">О компании</a></li>
-            <li><a href="team.html">Команда</a></li>
-            <li><a href="cases.html">Кейсы</a></li>
+              <li><a href="cases.html">Кейсы</a></li>
             <li><a href="blog.html">Блог</a></li>
           </ul>
         </div>

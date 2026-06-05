@@ -165,8 +165,38 @@
     document.getElementById('contactModal').addEventListener('click', (e) => {
       if (e.target.id === 'contactModal') closeModal()
     })
+
+    // Lightbox
+    var lbOverlay = document.createElement('div')
+    lbOverlay.className = 'lb-overlay'
+    lbOverlay.innerHTML = '<button class="lb-close" aria-label="Закрыть">&times;</button><img src="" alt="" />'
+    document.body.appendChild(lbOverlay)
+    var lbImg = lbOverlay.querySelector('img')
+
+    function openLightbox(src, alt) {
+      lbImg.src = src
+      lbImg.alt = alt || ''
+      lbOverlay.classList.add('active')
+      document.body.style.overflow = 'hidden'
+    }
+    function closeLightbox() {
+      if (!lbOverlay.classList.contains('active')) return
+      lbOverlay.classList.remove('active')
+      document.body.style.overflow = ''
+    }
+
+    lbOverlay.addEventListener('click', function (e) {
+      if (e.target !== lbImg) closeLightbox()
+    })
+    document.querySelectorAll('[data-lightbox]').forEach(function (el) {
+      el.addEventListener('click', function () { openLightbox(el.dataset.lightbox, el.dataset.lightboxAlt || '') })
+      el.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(el.dataset.lightbox, el.dataset.lightboxAlt || '') }
+      })
+    })
+
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeModal()
+      if (e.key === 'Escape') { closeLightbox(); closeModal() }
     })
 
     function handleFormSubmit(form, onSuccess) {

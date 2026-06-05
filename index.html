@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -39,7 +39,15 @@
           <div class="burger"><span></span><span></span><span></span></div>
           <ul class="menu">
             <li><a href="index.html" data-ru="Главная" data-en="Home">Главная</a></li>
-            <li><a href="about.html" data-ru="О компании" data-en="About">О компании</a></li>
+            <li class="has-dropdown">
+              <a href="about.html" data-ru="О компании" data-en="About">О компании <span class="dropdown-arrow">▾</span></a>
+              <ul class="dropdown">
+                <li><a href="about.html" data-ru="О компании" data-en="About">О компании</a></li>
+                <li><a href="team.html" data-ru="Команда" data-en="Team">Команда</a></li>
+                <li><a href="licenzii.html" data-ru="Лицензии" data-en="Licenses">Лицензии</a></li>
+                <li><a href="otzyvy.html" data-ru="Отзывы" data-en="Reviews">Отзывы</a></li>
+              </ul>
+            </li>
             <li class="has-dropdown">
               <a href="#" data-ru="Услуги" data-en="Services">Услуги <span class="dropdown-arrow">▾</span></a>
               <ul class="dropdown">
@@ -51,7 +59,6 @@
                 <li><a href="business-plans.html" data-ru="Бизнес-планы" data-en="Business plans">Бизнес-планы</a></li>
               </ul>
             </li>
-            <li><a href="team.html" data-ru="Команда" data-en="Team">Команда</a></li>
             <li><a href="cases.html" data-ru="Кейсы" data-en="Cases">Кейсы</a></li>
             <li><a href="blog.html" data-ru="Блог" data-en="Blog">Блог</a></li>
             <li><a href="contact.html" data-ru="Контакты" data-en="Contact">Контакты</a></li>
@@ -246,7 +253,7 @@
               <p class="contact-person-role" data-ru="Партнёр | ACCA, ДипИФР, аудитор РК" data-en="Partner | ACCA, DipIFR, Auditor RK">Партнёр | ACCA, ДипИФР, аудитор РК</p>
               <div class="contact-person-links">
                 <a href="tel:+77072202704" class="contact-person-phone">+7 (707) 220-27-04</a>
-                <a href="mailto:azauditconsulting@gmail.com" class="contact-person-email" data-ru="Написать Email" data-en="Send Email">Написать Email</a>
+                <a href="https://wa.me/77072202704" class="contact-person-email" target="_blank" rel="noopener" data-ru="Написать в WhatsApp" data-en="Write on WhatsApp">Написать в WhatsApp</a>
               </div>
             </div>
           </div>
@@ -415,8 +422,7 @@
             <h4 data-ru="Компания" data-en="Company">Компания</h4>
             <ul>
               <li><a href="about.html" data-ru="О компании" data-en="About">О компании</a></li>
-              <li><a href="team.html" data-ru="Команда" data-en="Team">Команда</a></li>
-              <li><a href="cases.html" data-ru="Кейсы" data-en="Cases">Кейсы</a></li>
+                <li><a href="cases.html" data-ru="Кейсы" data-en="Cases">Кейсы</a></li>
               <li><a href="blog.html" data-ru="Блог" data-en="Blog">Блог</a></li>
             </ul>
           </div>

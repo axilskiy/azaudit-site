@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
@@ -29,7 +29,15 @@
         <div class="burger"><span></span><span></span><span></span></div>
         <ul class="menu">
           <li><a href="index.html">Главная</a></li>
-          <li><a href="about.html">О компании</a></li>
+          <li class="has-dropdown">
+            <a href="about.html">О компании <span class="dropdown-arrow">▾</span></a>
+            <ul class="dropdown">
+              <li><a href="about.html">О компании</a></li>
+              <li><a href="team.html">Команда</a></li>
+              <li><a href="licenzii.html">Лицензии</a></li>
+              <li><a href="otzyvy.html">Отзывы</a></li>
+            </ul>
+          </li>
           <li class="has-dropdown">
             <a href="#">Услуги <span class="dropdown-arrow">▾</span></a>
             <ul class="dropdown">
@@ -41,7 +49,6 @@
               <li><a href="business-plans.html">Бизнес-планы</a></li>
             </ul>
           </li>
-          <li><a href="team.html">Команда</a></li>
           <li><a href="cases.html">Кейсы</a></li>
           <li><a href="blog.html">Блог</a></li>
           <li><a href="contact.html">Контакты</a></li>
@@ -154,8 +161,7 @@
           <h4>Компания</h4>
           <ul>
             <li><a href="about.html">О компании</a></li>
-            <li><a href="team.html">Команда</a></li>
-            <li><a href="cases.html">Кейсы</a></li>
+              <li><a href="cases.html">Кейсы</a></li>
             <li><a href="blog.html">Блог</a></li>
           </ul>
         </div>
