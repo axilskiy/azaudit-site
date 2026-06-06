@@ -81,7 +81,7 @@
       <div class="container hero-content">
         <div class="hero-text fade-in-left">
           <p class="hero-eyebrow" data-ru="Аудиторская компания в Алматы с 2010 года" data-en="Audit company in Almaty since 2010">Аудиторская компания в Алматы с 2010 года</p>
-          <h1 data-ru="A&Z АУДИТ КОНСАЛТИНГ" data-en="A&Z AUDIT CONSULTING">A&Z АУДИТ КОНСАЛТИНГ</h1>
+          <h1 data-ru="Аудиторская компания в Алматы — A&Z Аудит Консалтинг" data-en="Audit company in Almaty — A&Z Audit Consulting">Аудиторская компания в Алматы — A&Z Аудит Консалтинг</h1>
           <ul class="hero-list">
             <li data-ru="Проверим корректность ведения учёта" data-en="We verify the accuracy of your accounting">Проверим корректность ведения учёта</li>
             <li data-ru="Выявим факты мошенничества" data-en="We detect facts of fraud">Выявим факты мошенничества</li>
@@ -472,31 +472,73 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "A&Z Аудит Консалтинг",
-        "alternateName": "A&Z Audit Consulting",
-        "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?fm=jpg&q=80&w=1600&auto=format&fit=crop",
-        "@id": "https://www.azaudit.net/#organization",
-        "url": "https://www.azaudit.net/",
-        "telephone": "+77072202704",
-        "email": "azauditconsulting@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Таугуль 2, здание 37А",
-          "addressLocality": "Алматы",
-          "addressRegion": "Алматы",
-          "addressCountry": "KZ"
-        },
-        "description": "Аудиторская компания в Алматы с 2010 года. Аудит, бухгалтерские услуги, налоговый консалтинг и бизнес-планы.",
-        "areaServed": {"@type": "City", "name": "Алматы"},
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-          "opens": "09:00",
-          "closes": "18:00"
-        },
-        "foundingDate": "2010",
-        "sameAs": ["https://www.linkedin.com/company/az-audit-consulting/"]
+        "@graph": [
+          {
+            "@type": ["LocalBusiness", "AccountingService", "ProfessionalService"],
+            "@id": "https://www.azaudit.net/#organization",
+            "name": "A&Z Аудит Консалтинг",
+            "alternateName": "A&Z Audit Consulting",
+            "url": "https://www.azaudit.net/",
+            "logo": "https://www.azaudit.net/img/icons/favicon.png",
+            "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?fm=jpg&q=80&w=1600&auto=format&fit=crop",
+            "telephone": "+77072202704",
+            "email": "azauditconsulting@gmail.com",
+            "description": "Аудиторская компания в Алматы с 2010 года. Лицензия №18000011. Аудит, бухгалтерский аутсорсинг, налоговый консалтинг, восстановление учёта и бизнес-планирование.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Таугуль 2, здание 37А",
+              "addressLocality": "Алматы",
+              "addressRegion": "Алматы",
+              "addressCountry": "KZ"
+            },
+            "areaServed": {"@type": "City", "name": "Алматы"},
+            "openingHours": "Mo-Fr 09:00-18:00",
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            "foundingDate": "2010",
+            "priceRange": "$$",
+            "sameAs": [
+              "https://www.linkedin.com/company/az-audit-consulting/",
+              "https://2gis.kz/almaty"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Аудиторские и бухгалтерские услуги",
+              "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Обязательный аудит"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Инициативный аудит"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Экспресс аудит"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Налоговый консалтинг"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Бухгалтерский аутсорсинг"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Восстановление учёта"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Бизнес-планы"}}
+              ]
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.azaudit.net/#org",
+            "name": "A&Z Аудит Консалтинг",
+            "url": "https://www.azaudit.net/",
+            "logo": "https://www.azaudit.net/img/icons/favicon.png",
+            "sameAs": [
+              "https://www.linkedin.com/company/az-audit-consulting/",
+              "https://2gis.kz/almaty"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.azaudit.net/#website",
+            "url": "https://www.azaudit.net/",
+            "name": "A&Z Аудит Консалтинг",
+            "publisher": {"@id": "https://www.azaudit.net/#organization"},
+            "inLanguage": "ru"
+          }
+        ]
       }
     </script>
     <script type="application/ld+json">

@@ -1,0 +1,54 @@
+{
+  "redirects": [
+    {
+      "source": "/auditing",
+      "destination": "/audit.html",
+      "permanent": true
+    },
+    {
+      "source": "/ekspress-audit",
+      "destination": "/ekspress-audit.html",
+      "permanent": true
+    },
+    {
+      "source": "/buh-soprovozhdenn",
+      "destination": "/accounting.html",
+      "permanent": true
+    },
+    {
+      "source": "/outsourcing",
+      "destination": "/outsourcing.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/prof-sertifikaciya",
+      "destination": "/licenzii.html",
+      "permanent": true
+    },
+    {
+      "source": "/mezhdunarodnaya-sertifikaciya-acca",
+      "destination": "/licenzii.html",
+      "permanent": true
+    },
+    {
+      "source": "/uchetnaya-politika",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/otzyvy-klientov",
+      "destination": "/otzyvy.html",
+      "permanent": true
+    },
+    {
+      "source": "/tax-consulting",
+      "destination": "/tax.html",
+      "permanent": true
+    }
+  ]
+}
