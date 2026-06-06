@@ -23,6 +23,14 @@
     <meta name="theme-color" content="#0e2c5c" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/png" href="img/icons/favicon.png" />
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1381WXN0H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-J1381WXN0H');
+    </script>
   </head>
   <body>
     <header class="fade-in">
@@ -286,6 +294,16 @@
           {"@type": "ListItem", "position": 2, "name": "Бизнес-планы", "item": "https://www.azaudit.net/business-plans.html"}
         ]
       }
+    </script>
+      <script>
+      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(link) {
+        link.addEventListener('click', function() {
+          gtag('event', 'whatsapp_click', {
+            event_category: 'contact',
+            event_label: link.href
+          });
+        });
+      });
     </script>
   </body>
 </html>
