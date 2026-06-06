@@ -1461,7 +1461,7 @@ footer {
 
   .hero-text h1 { font-size: 36px; }
   .hero-list li { font-size: 15px; }
-  .hero-btns { flex-direction: column; align-items: flex-start; }
+  .hero-btns { flex-direction: column; align-items: stretch; }
 
   .stats-bar-grid { grid-template-columns: repeat(2, 1fr); }
   .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
@@ -1512,6 +1512,51 @@ footer {
 
   .btn { padding: 13px 28px; font-size: 14px; }
   .modal-box { padding: 36px 22px; }
+
+  /* Header: remove double padding (header provides its own side padding) */
+  header .container { padding: 0; }
+  /* Allow logo to shrink on very small screens */
+  .logo-container { flex: 0 1 auto; min-width: 0; }
+  .logo-text { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+
+  /* Section padding reductions */
+  section { padding: 56px 0; }
+  #hero { padding: 72px 0 56px; }
+  #contact-person { padding: 48px 0; }
+  #phone-block { padding: 40px 0; }
+
+  /* Hero CTA: allow text wrap so button doesn't overflow at 320px */
+  .hero-btns .btn { white-space: normal; text-align: center; }
+
+  /* Stats bar: reduce excessive vertical padding */
+  .stat-item { padding: 28px 16px; }
+
+  /* Cards: reduce horizontal padding to prevent overflow */
+  .benefit-card { padding: 28px 22px; }
+  .reduction-item { padding: 32px 24px; }
+  .contact-person-card { padding: 24px 20px; }
+
+  /* Phone number: prevent overflow at 320px (28px ≈ 280px > content area) */
+  .phone-big { font-size: 22px; }
+}
+
+/* ============================
+   RESPONSIVE — extra small ≤390px
+   (covers 320px, 375px, 390px test breakpoints)
+   ============================ */
+@media (max-width: 390px) {
+  /* Compact header layout */
+  .header-container { gap: 10px; }
+  .logo-container { gap: 8px; }
+  .logo-img { width: 36px; height: 36px; }
+  .logo-text { font-size: 13px; }
+  .lang-switch { padding: 5px 8px; font-size: 11px; }
+
+  /* Smaller stat numbers to avoid wrap */
+  .stat-number { font-size: 24px; }
+
+  /* Hero H1 slightly smaller for very narrow screens */
+  .hero-text h1 { font-size: 24px; }
 }
 
 /* ---- Review thumbnails & lightbox ---- */
