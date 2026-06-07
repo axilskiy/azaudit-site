@@ -223,6 +223,16 @@
           message: message || 'не указано'
         })
       }).then(function () {
+        if (typeof gtag === 'function') {
+          gtag('event', 'close_convert_lead', {
+            event_category: 'lead',
+            event_label: 'contact_form'
+          })
+          gtag('event', 'generate_lead', {
+            event_category: 'lead',
+            event_label: 'contact_form'
+          })
+        }
         onSuccess()
       }).catch(function (err) {
         console.error('EmailJS error:', err)
