@@ -267,4 +267,15 @@
     window.addEventListener('scroll', () => btnUp.classList.toggle('show', window.scrollY > 400))
     btnUp.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }))
   }
+
+  // Phone call tracking
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href^="tel:"]')
+    if (link && typeof gtag === 'function') {
+      gtag('event', 'phone_call_click', {
+        event_category: 'contact',
+        event_label: link.href
+      })
+    }
+  })
 })()
