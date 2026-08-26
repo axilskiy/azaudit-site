@@ -46,7 +46,7 @@
           <ul class="menu">
             <li><a href="index.html" data-ru="Главная" data-en="Home">Главная</a></li>
             <li class="has-dropdown">
-              <a href="about.html" data-ru="О компании" data-en="About">О компании <span class="dropdown-arrow">▾</span></a>
+              <a href="about.html"><span data-ru="О компании" data-en="About">О компании</span><span class="dropdown-arrow" aria-hidden="true"></span></a>
               <ul class="dropdown">
                 <li><a href="about.html" data-ru="О компании" data-en="About">О компании</a></li>
                 <li><a href="team.html" data-ru="Команда" data-en="Team">Команда</a></li>
@@ -55,12 +55,12 @@
               </ul>
             </li>
             <li class="has-dropdown">
-              <a href="#" data-ru="Услуги" data-en="Services">Услуги <span class="dropdown-arrow">▾</span></a>
+              <a href="#"><span data-ru="Услуги" data-en="Services">Услуги</span><span class="dropdown-arrow" aria-hidden="true"></span></a>
               <ul class="dropdown">
                 <li><a href="audit.html" data-ru="Аудиторские услуги" data-en="Audit services">Аудиторские услуги</a></li>
                 <li><a href="ekspress-audit.html" data-ru="Экспресс аудит" data-en="Express audit">Экспресс аудит</a></li>
                 <li><a href="accounting.html" data-ru="Бухгалтерские услуги" data-en="Accounting services">Бухгалтерские услуги</a></li>
-                <li><a href="outsourcing.html" data-ru="Бухгалтерский аутсорсинг" data-en="Accounting outsourcing">Аутсорсинг</a></li>
+                <li><a href="outsourcing.html" data-ru="Бухгалтерский аутсорсинг" data-en="Accounting outsourcing">Бухгалтерский аутсорсинг</a></li>
                 <li><a href="tax.html" data-ru="Налоговый консалтинг" data-en="Tax consulting">Налоговый консалтинг</a></li>
                 <li><a href="recovery.html" data-ru="Восстановление учёта" data-en="Accounting recovery">Восстановление учёта</a></li>
                 <li><a href="business-plans.html" data-ru="Бизнес-планы" data-en="Business plans">Бизнес-планы</a></li>
@@ -82,6 +82,16 @@
     </header>
 
     <button class="btn-up" id="btnUp">↑</button>
+
+    <nav class="az-breadcrumbs" aria-label="Хлебные крошки">
+      <div class="container">
+        <ol>
+          <li><a href="index.html" data-ru="Главная" data-en="Home">Главная</a></li>
+          <li><a href="audit.html" data-ru="Аудиторские услуги" data-en="Audit services">Аудиторские услуги</a></li>
+          <li aria-current="page" data-ru="Экспресс аудит" data-en="Express audit">Экспресс аудит</li>
+        </ol>
+      </div>
+    </nav>
 
     <!-- HERO -->
     <section id="hero" class="fade-in">
@@ -181,19 +191,19 @@
         <div class="about-grid">
 
           <div class="about-card fade-in-left">
-            <div class="benefit-number" style="font-size:1.5rem;font-weight:700;color:var(--accent);margin-bottom:8px">День 1</div>
+            <div class="benefit-number" style="font-size:1.5rem;font-weight:700;color:var(--accent);margin-bottom:8px" data-ru="День 1" data-en="Day 1">День 1</div>
             <h3 data-ru="Запрос документов" data-en="Document request">Запрос документов</h3>
             <p data-ru="Предоставляете доступ к учётной системе (1С или другой) и передаёте перечень первичных документов за проверяемый период." data-en="You provide access to the accounting system (1C or other) and hand over the list of primary documents for the audit period.">Предоставляете доступ к учётной системе (1С или другой) и передаёте перечень первичных документов за проверяемый период.</p>
           </div>
 
           <div class="about-card fade-in-right">
-            <div class="benefit-number" style="font-size:1.5rem;font-weight:700;color:var(--accent);margin-bottom:8px">Дни 2–4</div>
+            <div class="benefit-number" style="font-size:1.5rem;font-weight:700;color:var(--accent);margin-bottom:8px" data-ru="Дни 2–4" data-en="Days 2–4">Дни 2–4</div>
             <h3 data-ru="Анализ и проверка" data-en="Analysis and review">Анализ и проверка</h3>
             <p data-ru="Наши аудиторы проверяют приоритетные участки учёта, формируют перечень нарушений и оценивают уровень налоговых рисков." data-en="Our auditors review the priority accounting areas, compile a list of violations and assess the level of tax risks.">Наши аудиторы проверяют приоритетные участки учёта, формируют перечень нарушений и оценивают уровень налоговых рисков.</p>
           </div>
 
           <div class="about-card fade-in-left">
-            <div class="benefit-number" style="font-size:1.5rem;font-weight:700;color:var(--accent);margin-bottom:8px">День 5</div>
+            <div class="benefit-number" style="font-size:1.5rem;font-weight:700;color:var(--accent);margin-bottom:8px" data-ru="День 5" data-en="Day 5">День 5</div>
             <h3 data-ru="Отчёт и рекомендации" data-en="Report and recommendations">Отчёт и рекомендации</h3>
             <p data-ru="Получаете подробный отчёт с конкретными нарушениями, их налоговыми последствиями и планом устранения — в удобном формате." data-en="You receive a detailed report with specific violations, their tax implications and a remediation plan — in a convenient format.">Получаете подробный отчёт с конкретными нарушениями, их налоговыми последствиями и планом устранения — в удобном формате.</p>
           </div>
@@ -243,7 +253,7 @@
 
         <div class="about-card fade-in" style="margin-bottom:16px">
           <h3 data-ru="Чем экспресс аудит отличается от полного аудита?" data-en="How is an express audit different from a full audit?">Чем экспресс аудит отличается от полного аудита?</h3>
-          <p data-ru="Полный аудит проверяет всю финансовую отчётность в соответствии со стандартами МСФО или НСФО и завершается официальным аудиторским заключением. Экспресс аудит охватывает только приоритетные области риска: налоги, первичные документы, ключевые расчёты — и занимает 3–5 дней вместо нескольких недель." data-en="A full audit examines all financial statements in accordance with IFRS or NSFO standards and concludes with an official audit opinion. An express audit covers only priority risk areas — taxes, primary documents, key calculations — and takes 3–5 days instead of several weeks.">Полный аудит проверяет всю финансовую отчётность в соответствии со стандартами МСФО или НСФО и завершается официальным аудиторским заключением. Экспресс аудит охватывает только приоритетные области риска: налоги, первичные документы, ключевые расчёты — и занимает 3–5 дней вместо нескольких недель.</p>
+          <p data-ru="Полный аудит проверяет всю финансовую отчётность в соответствии со стандартами МСА и завершается официальным аудиторским заключением. Экспресс аудит охватывает только приоритетные области риска: налоги, первичные документы, ключевые расчёты — и занимает 3–5 дней вместо нескольких недель." data-en="A full audit examines all financial statements in accordance with ISA standards and concludes with an official audit opinion. An express audit covers only priority risk areas — taxes, primary documents, key calculations — and takes 3–5 days instead of several weeks.">Полный аудит проверяет всю финансовую отчётность в соответствии со стандартами МСА и завершается официальным аудиторским заключением. Экспресс аудит охватывает только приоритетные области риска: налоги, первичные документы, ключевые расчёты — и занимает 3–5 дней вместо нескольких недель.</p>
         </div>
 
         <div class="about-card fade-in" style="margin-bottom:16px">
@@ -367,7 +377,7 @@
             "name": "Чем экспресс аудит отличается от полного аудита?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Полный аудит проверяет всю финансовую отчётность в соответствии со стандартами МСА и завершается официальным заключением. Экспресс аудит охватывает только приоритетные области риска и занимает 3–5 дней вместо нескольких недель."
+              "text": "Полный аудит проверяет всю финансовую отчётность в соответствии со стандартами МСА и завершается официальным аудиторским заключением. Экспресс аудит охватывает только приоритетные области риска: налоги, первичные документы, ключевые расчёты — и занимает 3–5 дней вместо нескольких недель."
             }
           },
           {
@@ -375,7 +385,7 @@
             "name": "Сколько стоит экспресс аудит в Алматы?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Стоимость зависит от масштаба компании, объёма операций и проверяемого периода. Первичная консультация — бесплатно. Стоимость рассчитывается индивидуально в течение 1 рабочего дня."
+              "text": "Стоимость зависит от масштаба компании, объёма хозяйственных операций и проверяемого периода. Оставьте заявку — мы рассчитаем стоимость в течение 1 рабочего дня после первичного анализа. Первичная консультация бесплатна."
             }
           },
           {
@@ -383,7 +393,7 @@
             "name": "Какие документы нужны для экспресс аудита?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Доступ к учётной программе (1С или другой), банковские выписки за период, поданные налоговые декларации и основные первичные документы (договоры, акты, накладные, счета-фактуры)."
+              "text": "Доступ к учётной программе (1С, Бизнес Процесс или другой), банковские выписки за период, поданные налоговые декларации и основные первичные документы (договоры, акты, накладные, счета-фактуры). Полный список предоставим при начале работы."
             }
           },
           {
@@ -391,7 +401,7 @@
             "name": "Экспресс аудит заменяет обязательный аудит?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Нет. Экспресс аудит — диагностический инструмент, он не выдаёт аудиторского заключения и не заменяет обязательный аудит по законодательству РК."
+              "text": "Нет. Экспресс аудит — это диагностический инструмент, а не официальная аудиторская проверка. Он не выдаёт аудиторское заключение и не выполняет требования об обязательном аудите по законодательству РК. Для этого необходим полный аудит по стандартам МСА."
             }
           }
         ]
@@ -407,17 +417,6 @@
           {"@type": "ListItem", "position": 3, "name": "Экспресс аудит", "item": "https://www.azaudit.net/ekspress-audit.html"}
         ]
       }
-    </script>
-      <script>
-      document.addEventListener('click', function(e) {
-        var link = e.target.closest('a[href*="wa.me"], a[href*="whatsapp"]');
-        if (link && typeof gtag === 'function') {
-          gtag('event', 'whatsapp_click', {
-            event_category: 'contact',
-            event_label: link.href
-          });
-        }
-      });
     </script>
     <a href="https://wa.me/77072202704" class="wa-float" target="_blank" rel="noopener" aria-label="Написать в WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.524 5.845L0 24l6.335-1.502A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.894 0-3.661-.509-5.189-1.394l-.371-.221-3.763.892.944-3.656-.242-.38A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
   </body>

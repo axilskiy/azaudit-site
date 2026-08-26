@@ -46,7 +46,7 @@
           <ul class="menu">
             <li><a href="index.html" data-ru="Главная" data-en="Home">Главная</a></li>
             <li class="has-dropdown">
-              <a href="about.html" data-ru="О компании" data-en="About">О компании <span class="dropdown-arrow">▾</span></a>
+              <a href="about.html"><span data-ru="О компании" data-en="About">О компании</span><span class="dropdown-arrow" aria-hidden="true"></span></a>
               <ul class="dropdown">
                 <li><a href="about.html" data-ru="О компании" data-en="About">О компании</a></li>
                 <li><a href="team.html" data-ru="Команда" data-en="Team">Команда</a></li>
@@ -55,13 +55,13 @@
               </ul>
             </li>
             <li class="has-dropdown">
-              <a href="#" data-ru="Услуги" data-en="Services">Услуги <span class="dropdown-arrow">▾</span></a>
+              <a href="#"><span data-ru="Услуги" data-en="Services">Услуги</span><span class="dropdown-arrow" aria-hidden="true"></span></a>
               <ul class="dropdown">
                 <li><a href="audit.html" data-ru="Аудиторские услуги" data-en="Audit services">Аудиторские услуги</a></li>
                 <li><a href="accounting.html" data-ru="Бухгалтерские услуги" data-en="Accounting services">Бухгалтерские услуги</a></li>
-                <li><a href="outsourcing.html" data-ru="Бухгалтерский аутсорсинг" data-en="Accounting outsourcing">Аутсорсинг</a></li>
+                <li><a href="outsourcing.html" data-ru="Бухгалтерский аутсорсинг" data-en="Accounting outsourcing">Бухгалтерский аутсорсинг</a></li>
                 <li><a href="tax.html" data-ru="Налоговый консалтинг" data-en="Tax consulting">Налоговый консалтинг</a></li>
-                <li><a href="recovery.html" data-ru="Восстановление учета" data-en="Accounting recovery">Восстановление учета</a></li>
+                <li><a href="recovery.html" data-ru="Восстановление учёта" data-en="Accounting recovery">Восстановление учёта</a></li>
                 <li><a href="business-plans.html" data-ru="Бизнес-планы" data-en="Business plans">Бизнес-планы</a></li>
               </ul>
             </li>
@@ -160,6 +160,23 @@
             <h3 data-ru="Прозрачность" data-en="Transparency">Прозрачность</h3>
             <p data-ru="Каждый отчёт сопровождается подробным объяснением. Решения принимаются на основе реальных данных и в интересах клиента." data-en="Each report comes with a detailed explanation. Decisions are made based on real data and in the client's best interests.">Каждый отчёт сопровождается подробным объяснением. Решения принимаются на основе реальных данных и в интересах клиента.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="fade-in" id="faq">
+      <div class="container" style="max-width:860px">
+        <h2 class="fade-in" data-ru="Часто задаваемые вопросы" data-en="Frequently asked questions">Часто задаваемые вопросы</h2>
+        <div class="az-faq">
+          <details class="az-faq-item">
+            <summary data-ru="Когда была основана компания?" data-en="When was the company founded?">Когда была основана компания?</summary>
+            <p data-ru="A&amp;Z Аудит Консалтинг основана в 2010 году и работает на рынке Алматы более 13 лет." data-en="A&amp;Z Audit Consulting was founded in 2010 and has been active on the Almaty market for more than 13 years.">A&amp;Z Аудит Консалтинг основана в 2010 году и работает на рынке Алматы более 13 лет.</p>
+          </details>
+          <details class="az-faq-item">
+            <summary data-ru="Какие услуги предоставляет A&amp;Z Аудит Консалтинг?" data-en="What services does A&amp;Z Audit Consulting provide?">Какие услуги предоставляет A&amp;Z Аудит Консалтинг?</summary>
+            <p data-ru="Мы предоставляем аудит, бухгалтерские услуги, бухгалтерский аутсорсинг, налоговый консалтинг, восстановление учета и разработку бизнес-планов." data-en="We provide audit, accounting services, accounting outsourcing, tax consulting, accounting recovery and business plan development.">Мы предоставляем аудит, бухгалтерские услуги, бухгалтерский аутсорсинг, налоговый консалтинг, восстановление учета и разработку бизнес-планов.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -288,17 +305,6 @@
           }
         ]
       }
-    </script>
-      <script>
-      document.addEventListener('click', function(e) {
-        var link = e.target.closest('a[href*="wa.me"], a[href*="whatsapp"]');
-        if (link && typeof gtag === 'function') {
-          gtag('event', 'whatsapp_click', {
-            event_category: 'contact',
-            event_label: link.href
-          });
-        }
-      });
     </script>
     <a href="https://wa.me/77072202704" class="wa-float" target="_blank" rel="noopener" aria-label="Написать в WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.524 5.845L0 24l6.335-1.502A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.894 0-3.661-.509-5.189-1.394l-.371-.221-3.763.892.944-3.656-.242-.38A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
   </body>

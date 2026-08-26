@@ -46,7 +46,7 @@
           <ul class="menu">
             <li><a href="index.html" data-ru="Главная" data-en="Home">Главная</a></li>
             <li class="has-dropdown">
-              <a href="about.html" data-ru="О компании" data-en="About">О компании <span class="dropdown-arrow">▾</span></a>
+              <a href="about.html"><span data-ru="О компании" data-en="About">О компании</span><span class="dropdown-arrow" aria-hidden="true"></span></a>
               <ul class="dropdown">
                 <li><a href="about.html" data-ru="О компании" data-en="About">О компании</a></li>
                 <li><a href="team.html" data-ru="Команда" data-en="Team">Команда</a></li>
@@ -55,13 +55,13 @@
               </ul>
             </li>
             <li class="has-dropdown">
-              <a href="#" data-ru="Услуги" data-en="Services">Услуги <span class="dropdown-arrow">▾</span></a>
+              <a href="#"><span data-ru="Услуги" data-en="Services">Услуги</span><span class="dropdown-arrow" aria-hidden="true"></span></a>
               <ul class="dropdown">
                 <li><a href="audit.html" data-ru="Аудиторские услуги" data-en="Audit services">Аудиторские услуги</a></li>
                 <li><a href="accounting.html" data-ru="Бухгалтерские услуги" data-en="Accounting services">Бухгалтерские услуги</a></li>
-                <li><a href="outsourcing.html" data-ru="Бухгалтерский аутсорсинг" data-en="Accounting outsourcing">Аутсорсинг</a></li>
+                <li><a href="outsourcing.html" data-ru="Бухгалтерский аутсорсинг" data-en="Accounting outsourcing">Бухгалтерский аутсорсинг</a></li>
                 <li><a href="tax.html" data-ru="Налоговый консалтинг" data-en="Tax consulting">Налоговый консалтинг</a></li>
-                <li><a href="recovery.html" data-ru="Восстановление учета" data-en="Accounting recovery">Восстановление учета</a></li>
+                <li><a href="recovery.html" data-ru="Восстановление учёта" data-en="Accounting recovery">Восстановление учёта</a></li>
                 <li><a href="business-plans.html" data-ru="Бизнес-планы" data-en="Business plans">Бизнес-планы</a></li>
               </ul>
             </li>
@@ -108,9 +108,40 @@
             <p><a href="mailto:azauditconsulting@gmail.com" style="color:var(--accent);text-decoration:none">azauditconsulting@gmail.com</a></p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <h2 class="fade-in" style="margin-top:70px" data-ru="Напишите нам" data-en="Send us a message">Напишите нам</h2>
-        <a href="https://wa.me/77072202704" class="btn" style="display:table;margin:0 auto" data-ru="Отправить заявку" data-en="Submit a request">Отправить заявку</a>
+    <!-- ==================== CONTACT FORM ==================== -->
+    <section id="contact" class="fade-in">
+      <div class="container">
+        <h2 class="fade-in" data-ru="Напишите нам" data-en="Send us a message">Напишите нам</h2>
+        <p class="section-intro" data-ru="Заполните форму — мы свяжемся с вами в течение рабочего дня." data-en="Fill in the form and we will contact you within one business day.">Заполните форму — мы свяжемся с вами в течение рабочего дня.</p>
+        <form id="contactForm" novalidate>
+          <input type="text" name="name" placeholder="Ваше имя / Your name" required />
+          <input type="tel" name="phone" placeholder="Номер телефона / Phone" required />
+          <input type="email" name="email" placeholder="E-mail" />
+          <textarea name="message" placeholder="Сообщение / Message"></textarea>
+          <button type="submit" data-ru="Отправить заявку" data-en="Send request">Отправить заявку</button>
+        </form>
+        <p style="font-size:13px;color:var(--muted);margin-top:16px;text-align:center" data-ru="Или напишите нам сразу в WhatsApp" data-en="Or message us directly on WhatsApp">Или напишите нам сразу в WhatsApp</p>
+        <a href="https://wa.me/77072202704" class="btn" style="display:table;margin:10px auto 0" data-ru="Написать в WhatsApp" data-en="Message on WhatsApp">Написать в WhatsApp</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="fade-in" id="faq">
+      <div class="container" style="max-width:860px">
+        <h2 class="fade-in" data-ru="Часто задаваемые вопросы" data-en="Frequently asked questions">Часто задаваемые вопросы</h2>
+        <div class="az-faq">
+          <details class="az-faq-item">
+            <summary data-ru="Как связаться с A&amp;Z Audit Consulting?" data-en="How can I contact A&amp;Z Audit Consulting?">Как связаться с A&amp;Z Audit Consulting?</summary>
+            <p data-ru="Наши контакты: +7 (707) 220-27-04, azauditconsulting@gmail.com и адрес в Алматы." data-en="Our contact details: +7 (707) 220-27-04, azauditconsulting@gmail.com and our address in Almaty.">Наши контакты: +7 (707) 220-27-04, azauditconsulting@gmail.com и адрес в Алматы.</p>
+          </details>
+          <details class="az-faq-item">
+            <summary data-ru="Можно ли получить консультацию онлайн?" data-en="Can I get a consultation online?">Можно ли получить консультацию онлайн?</summary>
+            <p data-ru="Да, мы проводим онлайн-консультации и поддерживаем связь по телефону и email." data-en="Yes, we provide online consultations and stay in touch by phone and email.">Да, мы проводим онлайн-консультации и поддерживаем связь по телефону и email.</p>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -122,44 +153,44 @@
               <img src="img/icons/favicon.png" alt="A&Z" class="footer-logo-img" />
               <span class="footer-logo-text">A&Z Аудит</span>
             </div>
-            <h4>Компания</h4>
+            <h4 data-ru="Компания" data-en="Company">Компания</h4>
             <ul>
-              <li><a href="about.html">О компании</a></li>
-              <li><a href="cases.html">Кейсы</a></li>
-              <li><a href="blog.html">Блог</a></li>
+              <li><a href="about.html" data-ru="О компании" data-en="About">О компании</a></li>
+              <li><a href="cases.html" data-ru="Кейсы" data-en="Cases">Кейсы</a></li>
+              <li><a href="blog.html" data-ru="Блог" data-en="Blog">Блог</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h4>Услуги</h4>
+            <h4 data-ru="Услуги" data-en="Services">Услуги</h4>
             <ul>
-              <li><a href="audit.html">Аудиторские услуги</a></li>
-              <li><a href="accounting.html">Бухгалтерские услуги</a></li>
-              <li><a href="outsourcing.html">Бухгалтерский аутсорсинг</a></li>
-              <li><a href="tax.html">Налоговый консалтинг</a></li>
-              <li><a href="recovery.html">Восстановление учёта</a></li>
-              <li><a href="business-plans.html">Бизнес-планы</a></li>
+              <li><a href="audit.html" data-ru="Аудиторские услуги" data-en="Audit services">Аудиторские услуги</a></li>
+              <li><a href="accounting.html" data-ru="Бухгалтерские услуги" data-en="Accounting services">Бухгалтерские услуги</a></li>
+              <li><a href="outsourcing.html" data-ru="Бухгалтерский аутсорсинг" data-en="Accounting outsourcing">Бухгалтерский аутсорсинг</a></li>
+              <li><a href="tax.html" data-ru="Налоговый консалтинг" data-en="Tax consulting">Налоговый консалтинг</a></li>
+              <li><a href="recovery.html" data-ru="Восстановление учёта" data-en="Accounting recovery">Восстановление учёта</a></li>
+              <li><a href="business-plans.html" data-ru="Бизнес-планы" data-en="Business plans">Бизнес-планы</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h4>Клиентам</h4>
+            <h4 data-ru="Клиентам" data-en="For clients">Клиентам</h4>
             <ul>
-              <li><a href="cases.html">Кейсы</a></li>
-              <li><a href="blog.html">Полезные статьи</a></li>
-              <li><a href="licenzii.html">Лицензии</a></li>
-              <li><a href="otzyvy.html">Отзывы</a></li>
+              <li><a href="cases.html" data-ru="Кейсы" data-en="Cases">Кейсы</a></li>
+              <li><a href="blog.html" data-ru="Полезные статьи" data-en="Useful articles">Полезные статьи</a></li>
+              <li><a href="licenzii.html" data-ru="Лицензии" data-en="Licenses">Лицензии</a></li>
+              <li><a href="otzyvy.html" data-ru="Отзывы" data-en="Reviews">Отзывы</a></li>
             </ul>
           </div>
           <div class="footer-col footer-contact-col">
-            <h4>Контакты</h4>
+            <h4 data-ru="Контакты" data-en="Contacts">Контакты</h4>
             <a href="tel:+77072202704" class="footer-phone">+7 (707) 220-27-04</a>
             <a href="mailto:azauditconsulting@gmail.com" class="footer-email">azauditconsulting@gmail.com</a>
-            <address>г. Алматы, Таугуль 2, здание 37А</address>
-            <p class="footer-hours">Пн–Пт: 09:00–18:00</p>
+            <address data-ru="г. Алматы, Таугуль 2, здание 37А" data-en="Almaty, Taugul 2, building 37A">г. Алматы, Таугуль 2, здание 37А</address>
+            <p class="footer-hours" data-ru="Пн–Пт: 09:00–18:00" data-en="Mon–Fri: 09:00–18:00">Пн–Пт: 09:00–18:00</p>
           </div>
         </div>
         <div class="footer-bottom">
           <p>© A&amp;Z Audit Consulting 2026</p>
-          <p>Аудиторская лицензия №18000011</p>
+          <p data-ru="Аудиторская лицензия №18000011" data-en="Audit license No. 18000011">Аудиторская лицензия №18000011</p>
         </div>
       </div>
     </footer>
@@ -216,17 +247,6 @@
           }
         ]
       }
-    </script>
-      <script>
-      document.addEventListener('click', function(e) {
-        var link = e.target.closest('a[href*="wa.me"], a[href*="whatsapp"]');
-        if (link && typeof gtag === 'function') {
-          gtag('event', 'whatsapp_click', {
-            event_category: 'contact',
-            event_label: link.href
-          });
-        }
-      });
     </script>
     <a href="https://wa.me/77072202704" class="wa-float" target="_blank" rel="noopener" aria-label="Написать в WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.524 5.845L0 24l6.335-1.502A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.894 0-3.661-.509-5.189-1.394l-.371-.221-3.763.892.944-3.656-.242-.38A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
   </body>

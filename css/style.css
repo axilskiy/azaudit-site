@@ -167,15 +167,29 @@ nav { display: flex; align-items: center; }
 /* Dropdown */
 .has-dropdown { position: relative; }
 
+/* Keep the trigger label and its arrow on one line, centered together —
+   RU labels ("О компании") are long enough to wrap onto two lines at the
+   default block layout, which drops the arrow below the text. */
+.menu li.has-dropdown > a {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
 .dropdown-arrow {
-  font-size: 9px;
-  margin-left: 4px;
+  width: 6px;
+  height: 6px;
+  margin-left: 6px;
   display: inline-block;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
   transition: transform var(--transition);
+  vertical-align: 2px;
 }
 
 .has-dropdown:hover .dropdown-arrow,
-.has-dropdown.open .dropdown-arrow { transform: rotate(180deg); }
+.has-dropdown.open .dropdown-arrow { transform: rotate(225deg); }
 
 .dropdown {
   position: absolute;
@@ -1694,4 +1708,248 @@ footer {
     width: 24px;
     height: 24px;
   }
+}
+
+/* ============================
+   REGION SELECTOR
+   ============================ */
+.az-region-switcher {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.az-region-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.az-region-badge:hover,
+.az-region-badge[aria-expanded="true"] {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+.az-region-pin { font-size: 12px; line-height: 1; }
+
+.az-region-arrow {
+  font-size: 9px;
+  display: inline-block;
+  transition: transform var(--transition);
+}
+
+.az-region-badge[aria-expanded="true"] .az-region-arrow { transform: rotate(180deg); }
+
+.az-region-list {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  min-width: 160px;
+  padding: 8px;
+  list-style: none;
+  z-index: 1001;
+}
+
+.az-region-list[hidden] { display: none; }
+
+.az-region-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 9px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--text);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.az-region-option:hover { background: var(--blue-pale); color: var(--blue); }
+
+.az-region-option.active {
+  color: var(--blue);
+  font-weight: 600;
+  background: var(--blue-pale);
+}
+
+/* Confirmation banner */
+.az-region-banner {
+  position: fixed;
+  top: 88px;
+  right: 24px;
+  z-index: 1500;
+  max-width: 300px;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  padding: 18px 20px;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.az-region-banner.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.az-region-banner-text {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.az-region-banner-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.az-region-banner-btn {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  transition: all var(--transition);
+}
+
+.az-region-banner-yes {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+.az-region-banner-yes:hover { background: var(--blue); border-color: var(--blue); }
+
+.az-region-banner-other:hover { background: var(--blue-pale); color: var(--blue); }
+
+@media (max-width: 768px) {
+  .az-region-banner {
+    top: 84px;
+    right: 16px;
+    left: 16px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .az-region-badge { padding: 5px 8px; font-size: 11px; }
+}
+
+/* ============================
+   BREADCRUMBS
+   ============================ */
+.az-breadcrumbs {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.az-breadcrumbs ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.az-breadcrumbs li { display: flex; align-items: center; gap: 6px; }
+
+.az-breadcrumbs li:not(:last-child)::after {
+  content: '›';
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+.az-breadcrumbs a { color: var(--muted); transition: color var(--transition); }
+.az-breadcrumbs a:hover { color: var(--blue); }
+.az-breadcrumbs li[aria-current="page"] { color: var(--navy); font-weight: 600; }
+
+@media (max-width: 480px) {
+  .az-breadcrumbs { padding: 10px 0; }
+  .az-breadcrumbs ol { font-size: 12px; }
+}
+
+/* ============================
+   FAQ
+   ============================ */
+.az-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.az-faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 4px 24px;
+  transition: box-shadow var(--transition);
+}
+
+.az-faq-item[open] { box-shadow: var(--shadow-sm); }
+
+.az-faq-item summary {
+  padding: 18px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.az-faq-item summary::-webkit-details-marker { display: none; }
+
+.az-faq-item summary::after {
+  content: '+';
+  flex-shrink: 0;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--blue);
+  transition: transform var(--transition);
+}
+
+.az-faq-item[open] summary::after { content: '−'; }
+
+.az-faq-item p {
+  padding: 0 0 20px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 480px) {
+  .az-faq-item { padding: 4px 18px; }
+  .az-faq-item summary { font-size: 15px; padding: 15px 0; }
 }

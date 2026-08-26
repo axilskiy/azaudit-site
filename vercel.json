@@ -49,6 +49,31 @@
       "source": "/tax-consulting",
       "destination": "/tax.html",
       "permanent": true
+    },
+    {
+      "source": "/nalogovyy-konsultant-almaty.html",
+      "destination": "/tax.html",
+      "permanent": true
+    },
+    {
+      "source": "/vosstanovlenie-ucheta-almaty.html",
+      "destination": "/recovery.html",
+      "permanent": true
+    },
+    {
+      "source": "/buhgalter-autsors-almaty.html",
+      "destination": "/outsourcing.html",
+      "permanent": true
+    },
+    {
+      "source": "/buhgalterskoe-soprovozhdenie-almaty.html",
+      "destination": "/accounting.html",
+      "permanent": true
+    },
+    {
+      "source": "/audit-too-almaty.html",
+      "destination": "/audit.html",
+      "permanent": true
     }
   ]
 }

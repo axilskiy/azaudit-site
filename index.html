@@ -48,7 +48,7 @@
           <ul class="menu">
             <li><a href="index.html" data-ru="Главная" data-en="Home">Главная</a></li>
             <li class="has-dropdown">
-              <a href="about.html" data-ru="О компании" data-en="About">О компании <span class="dropdown-arrow">▾</span></a>
+              <a href="about.html"><span data-ru="О компании" data-en="About">О компании</span><span class="dropdown-arrow" aria-hidden="true"></span></a>
               <ul class="dropdown">
                 <li><a href="about.html" data-ru="О компании" data-en="About">О компании</a></li>
                 <li><a href="team.html" data-ru="Команда" data-en="Team">Команда</a></li>
@@ -57,11 +57,11 @@
               </ul>
             </li>
             <li class="has-dropdown">
-              <a href="#" data-ru="Услуги" data-en="Services">Услуги <span class="dropdown-arrow">▾</span></a>
+              <a href="#"><span data-ru="Услуги" data-en="Services">Услуги</span><span class="dropdown-arrow" aria-hidden="true"></span></a>
               <ul class="dropdown">
                 <li><a href="audit.html" data-ru="Аудиторские услуги" data-en="Audit services">Аудиторские услуги</a></li>
                 <li><a href="accounting.html" data-ru="Бухгалтерские услуги" data-en="Accounting services">Бухгалтерские услуги</a></li>
-                <li><a href="outsourcing.html" data-ru="Бухгалтерский аутсорсинг" data-en="Accounting outsourcing">Аутсорсинг</a></li>
+                <li><a href="outsourcing.html" data-ru="Бухгалтерский аутсорсинг" data-en="Accounting outsourcing">Бухгалтерский аутсорсинг</a></li>
                 <li><a href="tax.html" data-ru="Налоговый консалтинг" data-en="Tax consulting">Налоговый консалтинг</a></li>
                 <li><a href="recovery.html" data-ru="Восстановление учёта" data-en="Accounting recovery">Восстановление учёта</a></li>
                 <li><a href="business-plans.html" data-ru="Бизнес-планы" data-en="Business plans">Бизнес-планы</a></li>
@@ -339,7 +339,7 @@
             <p data-ru="компаний переплачивают налоги из-за ошибок в бухгалтерском учёте" data-en="of companies overpay taxes due to accounting errors">компаний переплачивают налоги из-за ошибок в бухгалтерском учёте</p>
           </div>
           <div class="reduction-item fade-in-right">
-            <div class="reduction-pct">до&nbsp;30%</div>
+            <div class="reduction-pct" data-ru="до&nbsp;30%" data-en="up&nbsp;to&nbsp;30%">до&nbsp;30%</div>
             <p data-ru="экономия операционных расходов при переходе на аутсорсинг бухгалтерии" data-en="savings on operating costs when switching to accounting outsourcing">экономия операционных расходов при переходе на аутсорсинг бухгалтерии</p>
           </div>
         </div>
@@ -402,6 +402,23 @@
         </div>
         <div style="text-align:center;margin-top:48px">
           <a href="blog.html" class="btn" data-ru="Все статьи" data-en="All articles">Все статьи</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="fade-in" id="faq">
+      <div class="container" style="max-width:860px">
+        <h2 class="fade-in" data-ru="Часто задаваемые вопросы" data-en="Frequently asked questions">Часто задаваемые вопросы</h2>
+        <div class="az-faq">
+          <details class="az-faq-item">
+            <summary data-ru="Какие аудиторские услуги предоставляет компания?" data-en="What audit services does the company provide?">Какие аудиторские услуги предоставляет компания?</summary>
+            <p data-ru="A&amp;Z Аудит Консалтинг выполняет обязательный аудит, инициативный аудит, налоговый аудит и проверку финансовой отчетности в Алматы." data-en="A&amp;Z Audit Consulting performs statutory audit, initiative audit, tax audit and financial statement reviews in Almaty.">A&amp;Z Аудит Консалтинг выполняет обязательный аудит, инициативный аудит, налоговый аудит и проверку финансовой отчетности в Алматы.</p>
+          </details>
+          <details class="az-faq-item">
+            <summary data-ru="Можно ли заказать бухгалтерский аутсорсинг?" data-en="Can I order accounting outsourcing?">Можно ли заказать бухгалтерский аутсорсинг?</summary>
+            <p data-ru="Да, мы предлагаем бухгалтерский аутсорсинг для малого и среднего бизнеса с полным ведением учета, отчетностью и сопровождением." data-en="Yes, we offer accounting outsourcing for small and medium businesses, including full bookkeeping, reporting and support.">Да, мы предлагаем бухгалтерский аутсорсинг для малого и среднего бизнеса с полным ведением учета, отчетностью и сопровождением.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -572,17 +589,6 @@
           }
         ]
       }
-    </script>
-      <script>
-      document.addEventListener('click', function(e) {
-        var link = e.target.closest('a[href*="wa.me"], a[href*="whatsapp"]');
-        if (link && typeof gtag === 'function') {
-          gtag('event', 'whatsapp_click', {
-            event_category: 'contact',
-            event_label: link.href
-          });
-        }
-      });
     </script>
     <a href="https://wa.me/77072202704" class="wa-float" target="_blank" rel="noopener" aria-label="Написать в WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.524 5.845L0 24l6.335-1.502A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.894 0-3.661-.509-5.189-1.394l-.371-.221-3.763.892.944-3.656-.242-.38A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
   </body>
